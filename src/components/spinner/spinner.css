@@ -34,16 +34,16 @@
 
 .lds-eclipse div {
     position: absolute;
-    -webkit-animation: lds-eclipse 1s linear infinite;
-    animation: lds-eclipse 1s linear infinite;
-    width: 160px;
-    height: 160px;
-    top: 20px;
-    left: 20px;
+    -webkit-animation: lds-eclipse 1.3s linear infinite;
+    animation: lds-eclipse 1.3s linear infinite;
+    width: 80px;
+    height: 80px;
+    top: 60px;
+    left: 60px;
     border-radius: 50%;
-    box-shadow: 0 4px 0 0 #ffffff;
-    -webkit-transform-origin: 80px 82px;
-    transform-origin: 80px 82px;
+    box-shadow: 0 4px 0 0 #3be8b0;
+    -webkit-transform-origin: 40px 42px;
+    transform-origin: 40px 42px;
 }
 
 .lds-eclipse {
