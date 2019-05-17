@@ -11,7 +11,7 @@ export default class PersonDetails extends Component {
 
   state = {
     person: null,
-      loading: true,
+    loading: true,
   };
 
   componentDidMount(){
@@ -38,6 +38,7 @@ export default class PersonDetails extends Component {
     if(this.props.personId !== prevProps.personId){
         this.updatePerson();
         this.setState({
+            prevProps,
             loading: true
         })
     }
@@ -46,11 +47,12 @@ export default class PersonDetails extends Component {
 
   render() {
 
-    if(this.state.loading){
-      return <Spinner/>;
-    }
+      if(this.state.loading){
+          return <Spinner/>;
+      }
 
     const {id, name, gender, birthYear, eyeColor} = this.state.person;
+
 
     return (
       <div className="person-details card">
