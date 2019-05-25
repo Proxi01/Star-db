@@ -17,9 +17,6 @@ class App extends Component{
                 <Header />
                 <RandomPlanet />
                 <PeoplePage/>
-                <ItemList getData = {this.swapiService.getAllPlanets}
-                    renderItem = {(item)=> (<span>{item.name}<button>!</button></span>)}
-                />
             </div>
         );
     }
