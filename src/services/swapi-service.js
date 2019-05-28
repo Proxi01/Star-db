@@ -1,6 +1,7 @@
 export default class SwapiService{
 
     _apiBase = 'https://cors-anywhere.herokuapp.com/https://swapi.co/api';
+    _imageBase = 'https://starwars-visualguide.com/assets/img';
 
     async getResource(url){
         const res = await fetch(`${this._apiBase}${url}`);
@@ -42,6 +43,16 @@ export default class SwapiService{
         const idRegExp = /\/([0-9]*)\/$/;
         const id = item.url.match(idRegExp)[1];
         return id;
+    }
+
+    getPersonImage = ({id})=>{
+        return `${this._imageBase}/characters/${id}.jpg`
+    }
+    getStarshipImage = ({id})=>{
+        return `${this._imageBase}/starships/${id}.jpg`
+    }
+    getPlanetImage = ({id})=>{
+        return `${this._imageBase}/planets/${id}.jpg`
     }
 
     _transformPlane = (planet) =>{
