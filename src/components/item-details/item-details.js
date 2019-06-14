@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SwapiService from '../../services/swapi-service';
 import Spinner from '../spinner'
 
 
@@ -20,7 +19,6 @@ const Record = ({item, field, label})=>{
 
 export default class ItemDetails extends Component {
 
-  swapiService = new SwapiService();
 
   state = {
     item: null,
@@ -65,7 +63,7 @@ export default class ItemDetails extends Component {
           return <Spinner/>;
       }
 
-    const {id, name, gender, birthYear, eyeColor} = this.state.item;
+    const {name} = this.state.item;
     const {image, item} = this.state;
 
     return (
